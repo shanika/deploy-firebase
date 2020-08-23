@@ -20,6 +20,13 @@ if [ "${GITHUB_REF}" != "refs/heads/${TARGET_BRANCH}" ]; then
     exit 1
 fi
 
+
+if [ -z "${SUB_DIR}" ]; then
+    echo "No SUB_DIR set"
+else
+    cd ${SUB_DIR}
+fi
+
 firebase deploy \
     -m "${GITHUB_SHA}" \
     --project ${FIREBASE_PROJECT} \
