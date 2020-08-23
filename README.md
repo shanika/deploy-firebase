@@ -1,5 +1,7 @@
 # Deploy to Firebase
 
+* A forked repo of lowply/deploy-firebase to add functionality to use a sub directory
+
 A GitHub Action to deploy to Firebase Hosting
 
 - You can choose a specific branch to allow deployment by using the `TARGET_BRANCH` env var (`master` if not specified).
